@@ -1,12 +1,14 @@
 # NyumbaLink: Product Requirements
 
-**Version:** 0.3 (DRAFT, pending founder approval)
+**Version:** 0.4 (DRAFT; Phase 1 interface work proceeds on this draft, D13)
 **Derived from:** PROJECT_CONSTITUTION.md v1.0 (Preamble, Articles 1, 3, 5, 17)
 **Implementation status:** Nothing described here is built yet. Everything is **Planned**.
 
 ## 1. Concept
 
 NyumbaLink is a mobile app that connects people searching for rental accommodation with landlords and authorized agents, starting in Kwa Vonza and Kitui town, Kenya. It is intended as a scalable business, not a demo.
+
+NyumbaLink is a subsidiary of the parent company LGC'S GROUP (D15).
 
 **Mission:** make finding and advertising rental accommodation simpler, more accessible and more reliable through a centralized mobile application.
 
@@ -31,7 +33,7 @@ NyumbaLink is a mobile app that connects people searching for rental accommodati
 
 All features map to the numbered requirements in SOFTWARE_REQUIREMENTS.md.
 
-- First screen offers Tenant or Landlord; landlords must create an account
+- First screen offers Tenant or Landlord; landlords must create an account; the app offers no admin registration (D14)
 - Browse, search by location, filter by price, view photos, details and map pin
 - Favourites
 - Pay by M-PESA to unlock the landlord's number, then call outside the platform
@@ -72,3 +74,7 @@ Product risks to manage: tenants paying for stale or fake listings, refunds, and
 - Accounts are required for everyone, with email (verification) and phone number (payment prompt).
 - Tenants pay per rental to see the landlord's number; listings are blurred until payment; contact happens by phone outside the platform.
 - Free map option; in-app notifications only.
+- Phase 1 proceeds on the draft documents (D13).
+- Administration is a separate application from the main app, for security. The main app offers only Tenant and Landlord registration (D14).
+- NyumbaLink is a subsidiary of LGC'S GROUP (D15).
+- An administrator decides what is blurred or hidden until payment, photos or location (D16).

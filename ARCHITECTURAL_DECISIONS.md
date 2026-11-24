@@ -13,6 +13,7 @@ Records important technical decisions, their reasoning and consequences. Status 
 - **Constitution impact:** Art. 5.1C, the `features/administration` folder in Art. 6.2 and the "Administrative screens" deliverable in Phase 1 assume admin screens inside the app. Under Art. 20 this needs a recorded amendment, which I will draft for approval and not apply silently.
 - **Proposed implementation:** A Flutter Web admin app in the same repository with its own entry point, signing in with admin accounts held apart from user profiles and assigned manually. This keeps the approved stack (no new framework). Hosting would need a free static host, which must be approved under Art. 16. The mobile app contains no admin code or admin routes.
 - **Alternatives:** Supabase Studio only (no moderation UI, not suitable for non-developer moderators); a separate non-Flutter web app (new framework, needs justification under 4.1).
+- **Update (D14):** The founder confirmed the separation for security: the main app offers only Tenant and Landlord registration and contains no admin code. The Flutter Web entry point (`lib/main_admin.dart`) is accepted for the Phase 1 prototype. Hosting remains pending (Q10).
 
 ## ADR-003: Property location as a map pin from the phone
 - **Status:** Founder decision (pins from phone location); **Proposed** (map provider)
@@ -52,6 +53,16 @@ Records important technical decisions, their reasoning and consequences. Status 
 - **Status:** Founder decision
 - **Decision:** Notifications are shown inside the app. No push service, so no Firebase (consistent with Art. 4.1).
 - **Consequence:** A landlord learns of an unlock or an approval only when they open the app.
+
+## ADR-011: Administrator decides what is blurred before payment
+- **Status:** Founder decision (principle, D16); **Proposed** (granularity and schema, Q15)
+- **Decision:** For each listing an administrator decides whether the photos are blurred and whether the exact location is hidden until the tenant has paid. The landlord's number is always hidden until payment (D9). Until an administrator decides, both are withheld.
+- **Consequences:** Needs per-listing fields in the database (to be added in DATABASE_SCHEMA v0.3 at Phase 2, not yet applied), a control in the admin review screen, and server-side withholding (NFR-SEC-05). The prototype shows the effect visually only.
+
+## ADR-012: No third-party packages in Phase 1; placeholders in pubspec.yaml
+- **Status:** Founder decision
+- **Decision:** Phase 1 uses only the Flutter SDK. Future dependencies appear in `pubspec.yaml` as commented placeholders, each labelled with its phase and documentation source. None is installed or version-pinned.
+- **Consequences:** Each placeholder needs approval and the Art. 4.1 evaluation before it is activated. Riverpod and the map packages stay proposals. `pubspec.lock` must be committed once packages exist (Art. 10.4).
 
 ## Proposed constitutional amendments (Art. 20)
 

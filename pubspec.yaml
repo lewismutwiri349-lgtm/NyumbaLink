@@ -1,0 +1,58 @@
+name: nyumbalink
+description: NyumbaLink - rental property discovery for Kwa Vonza and Kitui, Kenya. A subsidiary of LGC'S GROUP.
+publish_to: 'none'
+version: 0.1.0+1
+
+environment:
+  sdk: ^3.5.0
+
+# ---------------------------------------------------------------------------
+# DEPENDENCIES
+#
+# Phase 1 (interface design) uses NO third-party packages: Flutter's own
+# Material 3 widgets, built-in navigation and built-in state, with sample data.
+# (ADR-012, founder decision.)
+#
+# The commented entries below are PLACEHOLDERS ONLY. Nothing is installed.
+# Before any placeholder is uncommented, Constitution Art. 4.1 and 10.4 require
+# founder approval and an evaluation of security, maintenance status,
+# compatibility, licence, performance, cost and long-term support. Versions are
+# deliberately left blank: they are chosen at approval time and then locked by
+# pubspec.lock, which must be committed.
+# ---------------------------------------------------------------------------
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # --- Phase 2: backend foundation -----------------------------------------
+  # supabase_flutter:          # Supabase client. Approved stack (Art. 4). Public URL + anon key only.
+  # flutter_riverpod:          # State management. PROPOSED in SYSTEM_ARCHITECTURE s.2, needs approval.
+
+  # --- Phase 3: landlord listing management --------------------------------
+  # image_picker:              # Photo selection. Not yet in the docs; needs a proposal.
+  # flutter_image_compress:    # On-device compression and blurred copy (FR-LIST-03). Not yet in the docs.
+  # geolocator:                # Phone location for the map pin (D3, FR-LIST-02). "such as" in SYSTEM_ARCHITECTURE s.6.
+
+  # --- Phase 4: discovery and map -------------------------------------------
+  # flutter_map:               # ADR-009, PROPOSED (self-hosted OpenStreetMap data).
+  # vector_map_tiles:          # ADR-009, PROPOSED.
+  # vector_map_tiles_pmtiles:  # ADR-009, PROPOSED.
+  # url_launcher:              # Call button and "Open in Maps" fallback. Not yet in the docs.
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+  # --- Phase 6: testing ------------------------------------------------------
+  # integration_test:
+  #   sdk: flutter
+
+flutter:
+  uses-material-design: true
+
+  # --- Placeholders (Phase 1 uses no asset files yet) -------------------------
+  # assets:
+  #   - assets/images/
+  #   - assets/icons/
+  # fonts: (none planned; the system font is used until the founder approves a brand typeface)

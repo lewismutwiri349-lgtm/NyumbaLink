@@ -1,0 +1,10 @@
+# Static analysis rules. flutter_lints is the standard Flutter rule set
+# (Constitution 10.1: follow established Dart and Flutter conventions).
+include: package:flutter_lints/flutter.yaml
+
+linter:
+  rules:
+    # Constitution 10.3: errors must be handled deliberately, never hidden.
+    avoid_print: true
+    prefer_const_constructors: true
+    prefer_const_literals_to_create_immutables: true

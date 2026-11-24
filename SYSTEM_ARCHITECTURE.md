@@ -23,7 +23,7 @@ flowchart LR
 | Component | Technology | Notes |
 |---|---|---|
 | Mobile app | Flutter, Dart (Android first) | Tenant and landlord experience. No admin code, no secrets. |
-| Admin section | Flutter Web, same repository, separate entry point | **Proposed** (ADR-002). Separate login. |
+| Admin section | Flutter Web, same repository, separate entry point | **Approved for the Phase 1 prototype** (ADR-002, D14); hosting pending (Q10). Separate login. |
 | Backend | Supabase: Auth, PostgreSQL, Storage, Edge Functions | Approved stack (Art. 4). Edge Functions are the only server-side code, and they exist because M-PESA secrets and callbacks cannot live in the app. |
 | Payments | Safaricom Daraja M-PESA Express (STK Push) | Pending business setup (Q5). Sandbox first. |
 | Maps | See section 6 | Free option selected. |

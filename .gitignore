@@ -1,6 +1,8 @@
 # Miscellaneous
 *.class
 *.lock
+# Apps must commit their lockfile (Constitution 10.4)
+!pubspec.lock
 *.log
 *.pyc
 *.swp
@@ -121,3 +123,8 @@ app.*.symbols
 !**/ios/**/default.perspectivev3
 !/packages/flutter_tools/test/data/dart_dependencies_test/**/.packages
 !/dev/ci/**/Gemfile.lock
+
+# Secrets (Constitution 8.4): never commit environment files
+.env
+.env.*
+!.env.example
